@@ -1,9 +1,9 @@
 'use client';
 
-import { AuthRedirect } from '@/components/auth/LoginForm';
-import { AppSidebar } from '@/components/layout/AppSidebar';
-import { Header } from '@/components/layout/Header';
-import { SidebarInset, SidebarProvider } from '@/components/ui/sidebar';
+import { AuthRedirect } from '@/lib/modules/base/auth/LoginForm';
+import { AppSidebar } from '@/lib/modules/base/AppSidebar';
+import { Header } from '@/lib/modules/base/Header';
+import { SidebarInset, SidebarProvider } from '@/lib/modules/base/ui/sidebar';
 
 export default function DashboardLayout({ children }: { children: React.ReactNode }) {
   return (

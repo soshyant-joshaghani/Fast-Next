@@ -1,6 +1,6 @@
 import { apiBaseUrl } from '@/lib/config/backend';
-import { ApiError } from '@/lib/modules/global/utils/api-error';
-import { authFetch } from '@/lib/modules/global/utils/auth-fetch';
+import { ApiError } from '@/lib/modules/base/utils/api-error';
+import { authFetch } from '@/lib/modules/base/utils/auth-fetch';
 
 export type Note = {
   id: string;

@@ -2,20 +2,20 @@
 
 import { useCallback, useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { useAuth } from '@/lib/modules/global/auth-context';
-import { ApiError } from '@/lib/modules/global/utils/api-error';
+import { useAuth } from '@/lib/modules/base/auth-context';
+import { ApiError } from '@/lib/modules/base/utils/api-error';
 import {
   createUser,
   deleteUser,
   listUsers,
   updateUser,
   type ManagedUser,
-} from '@/lib/modules/base/users-api';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import { Switch } from '@/components/ui/switch';
+} from '@/lib/modules/base/users/api';
+import { Button } from '@/lib/modules/base/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/lib/modules/base/ui/card';
+import { Input } from '@/lib/modules/base/ui/input';
+import { Label } from '@/lib/modules/base/ui/label';
+import { Switch } from '@/lib/modules/base/ui/switch';
 import { cn } from '@/lib/utils';
 
 export default function AdminPage() {

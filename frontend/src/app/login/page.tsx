@@ -2,9 +2,9 @@
 
 import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import { useAuth } from '@/lib/modules/global/auth-context';
-import { LoginForm } from '@/components/auth/LoginForm';
-import { APP_NAME } from '@/lib/modules/global';
+import { useAuth } from '@/lib/modules/base/auth-context';
+import { LoginForm } from '@/lib/modules/base/auth/LoginForm';
+import { APP_NAME } from '@/lib/modules/base';
 
 export default function LoginPage() {
   const router = useRouter();

@@ -3,8 +3,8 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Briefcase, Home, Users } from 'lucide-react';
-import { useAuth } from '@/lib/modules/global/auth-context';
-import { APP_NAME } from '@/lib/modules/global';
+import { useAuth } from '@/lib/modules/base/auth-context';
+import { APP_NAME } from '@/lib/modules/base';
 import {
   Sidebar,
   SidebarContent,
@@ -16,7 +16,7 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-} from '@/components/ui/sidebar';
+} from '@/lib/modules/base/ui/sidebar';
 
 const baseItems = [
   { title: 'Dashboard', url: '/', icon: Home },

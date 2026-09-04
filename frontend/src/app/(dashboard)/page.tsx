@@ -3,11 +3,11 @@
 import { useEffect, useState } from 'react';
 import { toSameOriginApiUrl } from '@/lib/config/api-url';
 import { apiBaseUrl } from '@/lib/config/backend';
-import { useAuth } from '@/lib/modules/global/auth-context';
-import { fetchCurrentUser } from '@/lib/modules/global/utils/auth-api';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { useAuth } from '@/lib/modules/base/auth-context';
+import { fetchCurrentUser } from '@/lib/modules/base/utils/auth-api';
+import { Badge } from '@/lib/modules/base/ui/badge';
+import { Button } from '@/lib/modules/base/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/lib/modules/base/ui/card';
 
 export default function DashboardPage() {
   const { getToken } = useAuth();

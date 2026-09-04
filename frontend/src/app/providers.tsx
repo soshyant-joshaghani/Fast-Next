@@ -1,9 +1,9 @@
 'use client';
 
 import { ThemeProvider } from 'next-themes';
-import { AuthProvider } from '@/lib/modules/global/auth-context';
-import { PwaRegister } from '@/components/pwa/PwaRegister';
-import { TooltipProvider } from '@/components/ui/tooltip';
+import { AuthProvider } from '@/lib/modules/base/auth-context';
+import { PwaRegister } from '@/lib/modules/base/PwaRegister';
+import { TooltipProvider } from '@/lib/modules/base/ui/tooltip';
 
 export function Providers({ children }: { children: React.ReactNode }) {
   return (

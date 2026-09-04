@@ -175,6 +175,17 @@ See [docs/development.md](docs/development.md).
 
 Use the smallest appropriate implementation. Not every feature needs every layer — match the sample module's depth for similar CRUD features.
 
+### Frontend modules (mandatory)
+
+Under the frontend modules root (`frontend/src/lib/modules/`) there are **only**:
+
+- `base/` — kit/platform (auth, users, shell, i18n, stores) + design primitives at `base/ui/`
+- `apps/<domain>/` — product domains (API clients + UI), mirroring `backend/app/modules/apps/<domain>/`
+
+There is **no** project `components/` folder as the app UI home. Modules are the component home.
+Do not add `global/`, `shell/`, `layout/`, or a top-level `modules/ui/` peer of `base`/`apps`.
+Where shadcn (or equivalent) is used: `ui` → `@/lib/modules/base/ui`, `components` alias → `@/lib/modules/base`.
+
 ---
 
 ## Project layout
@@ -196,10 +207,11 @@ fast-next/
 │       └── apps/             # your product modules (+ sample/)
 ├── frontend/src/
 │   ├── app/                  # Next.js App Router pages
-│   ├── components/           # shadcn/ui + layout shell
 │   └── lib/
 │       ├── config/           # API_BASE_URL
-│       └── modules/          # auth, feature API clients
+│       └── modules/
+│           ├── base/         # kit/platform (auth, shell) + ui/
+│           └── apps/         # feature API clients
 └── tests/
     ├── backend/              # pytest (mirrors backend module paths)
     └── frontend/             # vitest

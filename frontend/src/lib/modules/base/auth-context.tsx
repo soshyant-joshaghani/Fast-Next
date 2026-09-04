@@ -9,7 +9,7 @@ import {
   useState,
   type ReactNode,
 } from 'react';
-import { fetchCurrentUser } from '@/lib/modules/global/utils/auth-api';
+import { fetchCurrentUser } from '@/lib/modules/base/utils/auth-api';
 
 export type AuthUser = {
   id?: string;

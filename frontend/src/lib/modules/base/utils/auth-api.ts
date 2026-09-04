@@ -1,7 +1,7 @@
 import { toSameOriginApiUrl } from '@/lib/config/api-url';
 import { apiBaseUrl } from '@/lib/config/backend';
-import type { AuthUser } from '@/lib/modules/global/auth-context';
-import { authFetch } from '@/lib/modules/global/utils/auth-fetch';
+import type { AuthUser } from '@/lib/modules/base/auth-context';
+import { authFetch } from '@/lib/modules/base/utils/auth-fetch';
 
 export function formatApiError(detail: unknown, fallback: string): string {
   if (typeof detail === 'string') return detail;

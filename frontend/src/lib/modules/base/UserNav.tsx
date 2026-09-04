@@ -2,9 +2,9 @@
 
 import { LogOut } from 'lucide-react';
 import { useRouter } from 'next/navigation';
-import { useAuth } from '@/lib/modules/global/auth-context';
-import { Avatar, AvatarFallback } from '@/components/ui/avatar';
-import { Button } from '@/components/ui/button';
+import { useAuth } from '@/lib/modules/base/auth-context';
+import { Avatar, AvatarFallback } from '@/lib/modules/base/ui/avatar';
+import { Button } from '@/lib/modules/base/ui/button';
 
 export function UserNav() {
   const router = useRouter();

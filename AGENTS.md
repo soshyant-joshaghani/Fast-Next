@@ -48,7 +48,7 @@ Sibling kits (Fast-Next, Fast-Svelte, Fast-Nuxt, Fast-Rio) stay in sync on share
 | Next.js routes | `frontend/src/app/` |
 | Platform auth/users | `backend/app/modules/base/` |
 | System/health | `backend/app/modules/system/` |
-| Shared frontend shell | `frontend/src/lib/modules/global/` |
+| Shared frontend shell | `frontend/src/lib/modules/base/` (UI at `base/ui/`) |
 | Shared config | `backend/app/core/config.py`, `.env` |
 | Migrations | `backend/app/alembics/core/versions/` |
 | Backend tests | `tests/backend/` (mirror module paths) |
@@ -103,8 +103,8 @@ Do **not** introduce a separate application-exception hierarchy or custom error 
 
 - Next.js App Router is first-class — implement UI in feature pages and `lib/modules/apps/<name>/api.ts`.
 - Use `frontend/src/app/(dashboard)/` for authenticated pages; `/login` for auth.
-- Reuse shell from `frontend/src/components/layout/` and auth from `frontend/src/lib/modules/global/`.
-- **Styling:** Tailwind + shadcn/ui only. No CSS in components or pages — utility classes and `components/ui/` primitives. Theme tokens live only in `frontend/src/app/globals.css`.
+- Reuse shell from `frontend/src/lib/modules/base/` and auth from `frontend/src/lib/modules/base/`.
+- **Styling:** Tailwind + shadcn/ui only. No CSS in components or pages — utility classes and `@/lib/modules/base/ui/` primitives. Theme tokens live only in `frontend/src/app/globals.css`.
 - Import API base URL from `@/lib/config/backend` — do not hard-code URLs.
 - Env var: `NEXT_PUBLIC_API_BASE_URL` (default `/api/v1`).
 

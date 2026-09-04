@@ -3,8 +3,8 @@
 import { useCallback, useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { Trash2 } from 'lucide-react';
-import { useAuth } from '@/lib/modules/global/auth-context';
-import { ApiError } from '@/lib/modules/global/utils/api-error';
+import { useAuth } from '@/lib/modules/base/auth-context';
+import { ApiError } from '@/lib/modules/base/utils/api-error';
 import {
   createNote,
   deleteNote,
@@ -12,10 +12,10 @@ import {
   updateNote,
   type Note,
 } from '@/lib/modules/apps/sample/api';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
+import { Button } from '@/lib/modules/base/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/lib/modules/base/ui/card';
+import { Input } from '@/lib/modules/base/ui/input';
+import { Label } from '@/lib/modules/base/ui/label';
 import {
   Sheet,
   SheetContent,
@@ -23,7 +23,7 @@ import {
   SheetFooter,
   SheetHeader,
   SheetTitle,
-} from '@/components/ui/sheet';
+} from '@/lib/modules/base/ui/sheet';
 import {
   Table,
   TableBody,
@@ -31,7 +31,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from '@/components/ui/table';
+} from '@/lib/modules/base/ui/table';
 
 export default function SampleNotesPage() {
   const router = useRouter();

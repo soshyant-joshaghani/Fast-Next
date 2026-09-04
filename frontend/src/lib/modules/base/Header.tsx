@@ -1,9 +1,9 @@
 'use client';
 
-import { SidebarTrigger } from '@/components/ui/sidebar';
-import { Separator } from '@/components/ui/separator';
-import { ThemeToggle } from '@/components/layout/ThemeToggle';
-import { UserNav } from '@/components/layout/UserNav';
+import { SidebarTrigger } from '@/lib/modules/base/ui/sidebar';
+import { Separator } from '@/lib/modules/base/ui/separator';
+import { ThemeToggle } from '@/lib/modules/base/ThemeToggle';
+import { UserNav } from '@/lib/modules/base/UserNav';
 
 export function Header() {
   return (

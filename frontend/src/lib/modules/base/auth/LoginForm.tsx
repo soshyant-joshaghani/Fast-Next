@@ -2,12 +2,12 @@
 
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { useAuth } from '@/lib/modules/global/auth-context';
+import { useAuth } from '@/lib/modules/base/auth-context';
 import {
   fetchCurrentUser,
   loginWithPassword,
   signupWithPrivateRoute,
-} from '@/lib/modules/global/utils/auth-api';
+} from '@/lib/modules/base/utils/auth-api';
 import { cn } from '@/lib/utils';
 
 type Tab = 'login' | 'signup';
